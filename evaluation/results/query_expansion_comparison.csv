@@ -1,0 +1,46 @@
+question,expected_source,baseline_rank,rrf_rank,baseline_hit1,baseline_hit3,baseline_hit4,rrf_hit1,rrf_hit3,rrf_hit4
+How can I troubleshoot an SSH connection timeout when connecting to an Amazon EC2 Linux instance?,ec2_connectivity.pdf,1,1,True,True,True,True,True,True
+What default SSH username should I use for an Ubuntu EC2 instance?,ec2_connectivity.pdf,2,2,False,True,True,False,True,True
+What should I check before troubleshooting an EC2 instance connection?,ec2_connectivity.pdf,3,3,False,True,True,False,True,True
+How can I investigate an EC2 instance that is experiencing high CPU load and connection problems?,ec2_connectivity.pdf,3,2,False,True,True,False,True,True
+Where can I view the individual system and instance status-check results for an impaired EC2 instance?,ec2_failed_status_checks.pdf,2,2,False,True,True,False,True,True
+What should I collect if an EC2 Linux instance fails a status check and its applications are not running as expected?,ec2_failed_status_checks.pdf,2,2,False,True,True,False,True,True
+What five types of status checks are described for Amazon EC2 instances?,ec2_status_checks.pdf,1,1,True,True,True,True,True,True
+"What does an EC2 application status check monitor, and is it enabled by default?",ec2_status_checks.pdf,1,1,True,True,True,True,True,True
+What does the CloudWatch agent collect from EC2 instances and on-premises servers?,ec2_monitoring.pdf,1,1,True,True,True,True,True,True
+Why should adjacent Cisco wireless access points use non-overlapping channels?,wireless_lan_connectivity.pdf,1,1,True,True,True,True,True,True
+What should be checked if wireless clients cannot authenticate after upgrading Cisco IOS on an access point?,wireless_lan_connectivity.pdf,1,1,True,True,True,True,True,True
+What can cause poor wireless throughput when multiple access points are deployed close to each other?,wireless_lan_connectivity.pdf,1,1,True,True,True,True,True,True
+Which two utilities does the Cisco TCP/IP troubleshooting guide identify for investigating IP connectivity problems?,tcp_ip_troubleshooting.pdf,1,1,True,True,True,True,True,True
+What IP configuration details should be checked when troubleshooting local connectivity on a host?,tcp_ip_troubleshooting.pdf,2,2,False,True,True,False,True,True
+What should be investigated when a device can reach an IP address but has trouble reaching a destination by name?,tcp_ip_troubleshooting.pdf,1,1,True,True,True,True,True,True
+What should be consistent across ports that are grouped into a Cisco EtherChannel?,lan_switching_troubleshooting.pdf,1,1,True,True,True,True,True,True
+Why does the Cisco LAN switching guide recommend checking port capabilities before configuring EtherChannel?,lan_switching_troubleshooting.pdf,1,1,True,True,True,True,True,True
+Which protocol does the Cisco LAN switching guide describe as a preferred way to negotiate EtherChannel automatically?,lan_switching_troubleshooting.pdf,1,1,True,True,True,True,True,True
+What should an administrator investigate when Gmail messages are missing from a user's web interface?,workspace_admin_troubleshooting.pdf,1,1,True,True,True,True,True,True
+Can aspmx.l.google.com be used to send email to external recipients from a printer or application?,workspace_admin_troubleshooting.pdf,1,1,True,True,True,True,True,True
+What does Gmail SMTP error 452 4.2.2 indicate?,gmail_smtp_errors.pdf,2,2,False,True,True,False,True,True
+What is the purpose of default routing in Google Workspace?,email_routing_delivery.pdf,1,1,True,True,True,True,True,True
+What can an administrator configure with Google Workspace routing settings?,email_routing_delivery.pdf,1,1,True,True,True,True,True,True
+"Which authentication mechanism do Gmail's IMAP, POP, and SMTP services support for third-party clients and apps?",imap_pop_smtp_configuration.pdf,1,1,True,True,True,True,True,True
+"Which server is used by Gmail clients to send outgoing mail, according to the IMAP, POP, and SMTP configuration guide?",imap_pop_smtp_configuration.pdf,1,1,True,True,True,True,True,True
+What does the Google Workspace SMTP relay error 'Mail relay denied' indicate?,smtp_relay_errors.pdf,1,1,True,True,True,True,True,True
+What do the gsmtp and gcdp identifiers appended to Gmail SMTP errors represent?,gmail_smtp_troubleshooting.pdf,2,2,False,True,True,False,True,True
+What should I do if a Windows 11 computer cannot connect to Wi-Fi?,wifi_troubleshooting.pdf,1,1,True,True,True,True,True,True
+What should I check if a Windows PC cannot connect through Ethernet?,ethernet_troubleshooting.pdf,1,1,True,True,True,True,True,True
+Which commands does Microsoft recommend for resetting network settings and refreshing DNS on Windows?,ethernet_troubleshooting.pdf,1,1,True,True,True,True,True,True
+What should be checked first when Windows does not recognize a USB-connected printer?,printer_troubleshooting.pdf,1,1,True,True,True,True,True,True
+Which Windows service can be restarted when a printer is not recognized?,printer_troubleshooting.pdf,1,1,True,True,True,True,True,True
+How can a user run the Windows network and internet troubleshooter from the Get Help app?,network_troubleshooting.pdf,1,1,True,True,True,True,True,True
+How can a user run the Windows printer troubleshooter from the Get Help app?,network_troubleshooting.pdf,1,1,True,True,True,True,True,True
+What should be checked if a Windows Wi-Fi connection is weak or unstable?,wifi_troubleshooting.pdf,1,1,True,True,True,True,True,True
+What should be checked if a Windows Ethernet connection has no internet access even though the cable is connected?,ethernet_troubleshooting.pdf,1,1,True,True,True,True,True,True
+How do I configure a static IP address on an Ubuntu Server using Netplan?,netplan_configuration.pdf,1,1,True,True,True,True,True,True
+How can I check the network interfaces and IP addresses configured on Ubuntu Server?,netplan_configuration.pdf,1,1,True,True,True,True,True,True
+How does Ubuntu Netplan handle DNS client configuration?,netplan_configuration.pdf,1,1,True,True,True,True,True,True
+Which package does the Ubuntu DNS guide instruct administrators to install to run a BIND name server?,dns_configuration.pdf,1,1,True,True,True,True,True,True
+Which utility does the Ubuntu DNS guide recommend for validating a DNS zone file before making it live?,dns_configuration.pdf,1,1,True,True,True,True,True,True
+What is the default firewall configuration tool described in the Ubuntu Server firewall guide?,firewall_configuration.pdf,1,1,True,True,True,True,True,True
+Which file can be edited to configure the default behavior of the OpenSSH server on Ubuntu?,openssh_configuration.pdf,1,1,True,True,True,True,True,True
+"Which network configuration system does Ubuntu Server use, according to the Ubuntu networking overview?",ubuntu_networking.pdf,2,2,False,True,True,False,True,True
+Which storage option does the Ubuntu Server installation guide describe selecting during a basic installation?,ubuntu_installation.pdf,1,1,True,True,True,True,True,True

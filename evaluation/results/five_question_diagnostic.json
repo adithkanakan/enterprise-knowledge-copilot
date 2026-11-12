@@ -1,0 +1,600 @@
+{
+  "evaluation_name": "Five-question local diagnostic",
+  "created_at_utc": "2026-11-12T11:02:03.142716+00:00",
+  "method": {
+    "judge": "qwen2.5:3b",
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "answer_generation": "reused saved Gemini answers; no regeneration",
+    "contexts": "reused saved retrieved contexts; no retrieval rerun",
+    "metrics": [
+      "RAGAS AnswerRelevancy",
+      "RAGAS ContextPrecision",
+      "RAGAS ContextRecall",
+      "experimental windowed HHEM claim support"
+    ],
+    "timeout_seconds_per_metric": 180,
+    "answer_relevancy_strictness": 1
+  },
+  "completed_count": 5,
+  "total_questions": 5,
+  "results": [
+    {
+      "question": "What does the Google Workspace SMTP relay error 'Mail relay denied' indicate?",
+      "publisher": "Google Workspace",
+      "source_file": "smtp_relay_errors.pdf",
+      "topic": "SMTP relay denied",
+      "answer": "The Google Workspace SMTP relay error **\"Mail relay denied\"** indicates that:\n\n1. **Unregistered Domain or IP:** Email is being sent from a domain or IP address that is not registered in Google Workspace [1].\n2. **Unidentified Domain Policy:** The domain with the configured policy could not be properly identified [1].\n\n### Recommended Troubleshooting Steps\nTo resolve this issue, perform the following checks based on the system documentation:\n\n1. **Verify Sending Device IP:** Sign in to your Google Workspace account and verify that your sending device's IP is registered within the Google Workspace SMTP relay service settings [1].\n2. **Check HELO Command:** Ensure that the sending client uses an appropriate value for the `HELO` command, ideally the fully qualified domain name (FQDN) of the sending device [1].\n3. **Check MAIL FROM Address:** Ensure that the SMTP sender (`MAIL FROM:`) properly identifies the send address (for example, `MAIL FROM: <user@example.com>`) [1].",
+      "reference_answer": "The sending domain or IP address is not registered in Google Workspace. The guide instructs administrators to verify that the sending device IP is registered in the Google Workspace SMTP relay service settings.",
+      "retrieved_context_count": 4,
+      "retrieved_sources": [
+        {
+          "source": "google_workspace/smtp_relay_errors.pdf",
+          "file_name": "smtp_relay_errors.pdf",
+          "file_type": "pdf",
+          "page_number": 1,
+          "start_index": 0
+        },
+        {
+          "source": "google_workspace/gmail_smtp_troubleshooting.pdf",
+          "file_name": "gmail_smtp_troubleshooting.pdf",
+          "file_type": "pdf",
+          "page_number": 5,
+          "start_index": 2009
+        },
+        {
+          "source": "google_workspace/smtp_relay_errors.pdf",
+          "file_name": "smtp_relay_errors.pdf",
+          "file_type": "pdf",
+          "page_number": 2,
+          "start_index": 1357
+        },
+        {
+          "source": "google_workspace/smtp_relay_errors.pdf",
+          "file_name": "smtp_relay_errors.pdf",
+          "file_type": "pdf",
+          "page_number": 1,
+          "start_index": 661
+        }
+      ],
+      "claim_counts": {
+        "factual_claims_evaluated": 2,
+        "formatting_or_heading_excluded": 0,
+        "documentation_gap_disclaimer_excluded": 0,
+        "total_excluded": 0
+      },
+      "experimental_hhem": {
+        "mean_best_window_support_score": 0.7708447277545929,
+        "binary_claim_support_rate": 1.0,
+        "binary_threshold": 0.5,
+        "claims": [
+          {
+            "claim_number": 1,
+            "claim": "**Unregistered Domain or IP:** Email is being sent from a domain or IP address that is not registered in Google Workspace . **Unidentified Domain Policy:** The domain with the configured policy could not be properly identified .",
+            "best_window_support_score": 0.8921917676925659,
+            "supported_at_threshold": true,
+            "all_window_scores": [
+              0.8921917676925659,
+              0.23708224296569824,
+              0.18890276551246643,
+              0.028496840968728065
+            ]
+          },
+          {
+            "claim_number": 2,
+            "claim": "**Verify Sending Device IP:** Sign in to your Google Workspace account and verify that your sending device's IP is registered within the Google Workspace SMTP relay service settings . **Check HELO Command:** Ensure that the sending client uses an appropriate value for the `HELO` command, ideally the fully qualified domain name (FQDN) of the sending device . **Check MAIL FROM Address:** Ensure that the SMTP sender (`MAIL FROM:`) properly identifies the send address (for example, `MAIL FROM: <user@example.com>`) .",
+            "best_window_support_score": 0.6494976878166199,
+            "supported_at_threshold": true,
+            "all_window_scores": [
+              0.6494976878166199,
+              0.09531167894601822,
+              0.09993355721235275,
+              0.04526516795158386
+            ]
+          }
+        ],
+        "excluded_claims": [],
+        "context_tokens": 677,
+        "window_count": 4,
+        "window_tokens": 250,
+        "overlap_tokens": 40
+      },
+      "ragas_metrics": {
+        "answer_relevancy": 0.0,
+        "context_precision": null,
+        "context_precision_error": "Metric timeout",
+        "context_recall": null,
+        "context_recall_error": "Metric timeout"
+      },
+      "rerun_status": "completed"
+    },
+    {
+      "question": "What does Gmail SMTP error 452 4.2.2 indicate?",
+      "publisher": "Google Workspace",
+      "source_file": "gmail_smtp_errors.pdf",
+      "topic": "Gmail SMTP error codes",
+      "answer": "Based on the provided document excerpts, information regarding Gmail SMTP error **452 4.2.2** is unavailable. \n\nThe retrieved excerpts document several other SMTP error codes—such as 450 4.2.1 [1], 421 4.7.0 [2], 454 4.7.0 [2], 550 5.4.5 [3], and 552 5.7.0 [4]—but do not include an entry or explanation for error 452 4.2.2.",
+      "reference_answer": "The error indicates that the recipient's inbox is out of storage space. The recipient should manage Google storage to free up space before delivery can succeed.",
+      "retrieved_context_count": 4,
+      "retrieved_sources": [
+        {
+          "source": "google_workspace/gmail_smtp_troubleshooting.pdf",
+          "file_name": "gmail_smtp_troubleshooting.pdf",
+          "file_type": "pdf",
+          "page_number": 1,
+          "start_index": 0
+        },
+        {
+          "source": "google_workspace/gmail_smtp_troubleshooting.pdf",
+          "file_name": "gmail_smtp_troubleshooting.pdf",
+          "file_type": "pdf",
+          "page_number": 2,
+          "start_index": 0
+        },
+        {
+          "source": "google_workspace/gmail_smtp_errors.pdf",
+          "file_name": "gmail_smtp_errors.pdf",
+          "file_type": "pdf",
+          "page_number": 4,
+          "start_index": 1291
+        },
+        {
+          "source": "google_workspace/gmail_smtp_errors.pdf",
+          "file_name": "gmail_smtp_errors.pdf",
+          "file_type": "pdf",
+          "page_number": 5,
+          "start_index": 0
+        }
+      ],
+      "claim_counts": {
+        "factual_claims_evaluated": 3,
+        "formatting_or_heading_excluded": 0,
+        "documentation_gap_disclaimer_excluded": 0,
+        "total_excluded": 0
+      },
+      "experimental_hhem": {
+        "mean_best_window_support_score": 0.27719922363758087,
+        "binary_claim_support_rate": 0.0,
+        "binary_threshold": 0.5,
+        "claims": [
+          {
+            "claim_number": 1,
+            "claim": "Information regarding Gmail SMTP error **452 4.2.2** is unavailable based on the provided document excerpts.",
+            "best_window_support_score": 0.1702476143836975,
+            "supported_at_threshold": false,
+            "all_window_scores": [
+              0.08724834024906158,
+              0.13912148773670197,
+              0.09930136799812317,
+              0.1702476143836975
+            ]
+          },
+          {
+            "claim_number": 2,
+            "claim": "The provided excerpts document other SMTP error codes such as 450 4.2.1, 421 4.7.0, 454 4.7.0, 550 5.4.5, and 552 5.7.0.",
+            "best_window_support_score": 0.22670136392116547,
+            "supported_at_threshold": false,
+            "all_window_scores": [
+              0.18514281511306763,
+              0.22670136392116547,
+              0.13276885449886322,
+              0.08847218006849289
+            ]
+          },
+          {
+            "claim_number": 3,
+            "claim": "The provided excerpts do not include an entry or explanation for error 452 4.2.2.",
+            "best_window_support_score": 0.43464869260787964,
+            "supported_at_threshold": false,
+            "all_window_scores": [
+              0.43464869260787964,
+              0.349402517080307,
+              0.24860528111457825,
+              0.1465366780757904
+            ]
+          }
+        ],
+        "excluded_claims": [],
+        "context_tokens": 738,
+        "window_count": 4,
+        "window_tokens": 250,
+        "overlap_tokens": 40
+      },
+      "ragas_metrics": {
+        "answer_relevancy": 0.0,
+        "context_precision": 0.9999999999,
+        "context_recall": 0.0
+      },
+      "rerun_status": "completed"
+    },
+    {
+      "question": "Which commands does Microsoft recommend for resetting network settings and refreshing DNS on Windows?",
+      "publisher": "Microsoft",
+      "source_file": "ethernet_troubleshooting.pdf",
+      "topic": "Windows network commands",
+      "answer": "Based on the provided documentation excerpts:\n\n* **Refreshing DNS:** The command recommended to flush the DNS client resolver cache on Windows is `ipconfig /flushdns` [1].\n\n* **Resetting Network Settings:** The provided excerpts do not contain specific commands for resetting network settings on Windows. The available documents mention general procedures such as requesting/renewing an IP address [1], forgetting a Wi-Fi network via the Settings app [3], and running the Network and Internet troubleshooter [4], but no specific reset commands (such as `netsh` commands) are provided in the source text.",
+      "reference_answer": "The documented command sequence is netsh winsock reset, netsh int ip reset, ipconfig /release, ipconfig /renew, and ipconfig /flushdns. Run them in an elevated Command Prompt.",
+      "retrieved_context_count": 4,
+      "retrieved_sources": [
+        {
+          "source": "microsoft/ethernet_troubleshooting.pdf",
+          "file_name": "ethernet_troubleshooting.pdf",
+          "file_type": "pdf",
+          "page_number": 2,
+          "start_index": 1269
+        },
+        {
+          "source": "ubuntu/netplan_configuration.pdf",
+          "file_name": "netplan_configuration.pdf",
+          "file_type": "pdf",
+          "page_number": 5,
+          "start_index": 1334
+        },
+        {
+          "source": "microsoft/wifi_troubleshooting.pdf",
+          "file_name": "wifi_troubleshooting.pdf",
+          "file_type": "pdf",
+          "page_number": 2,
+          "start_index": 677
+        },
+        {
+          "source": "microsoft/network_troubleshooting.pdf",
+          "file_name": "network_troubleshooting.pdf",
+          "file_type": "pdf",
+          "page_number": 1,
+          "start_index": 0
+        }
+      ],
+      "claim_counts": {
+        "factual_claims_evaluated": 4,
+        "formatting_or_heading_excluded": 0,
+        "documentation_gap_disclaimer_excluded": 0,
+        "total_excluded": 0
+      },
+      "experimental_hhem": {
+        "mean_best_window_support_score": 0.3946476262062788,
+        "binary_claim_support_rate": 0.25,
+        "binary_threshold": 0.5,
+        "claims": [
+          {
+            "claim_number": 1,
+            "claim": "For flushing the DNS client resolver cache on Windows, the command recommended is `ipconfig /flushdns`.",
+            "best_window_support_score": 0.5673537850379944,
+            "supported_at_threshold": true,
+            "all_window_scores": [
+              0.5673537850379944,
+              0.01804090291261673,
+              0.008497017435729504
+            ]
+          },
+          {
+            "claim_number": 2,
+            "claim": "The provided documentation excerpts do not contain specific commands for resetting network settings on Windows.",
+            "best_window_support_score": 0.45787593722343445,
+            "supported_at_threshold": false,
+            "all_window_scores": [
+              0.4045991599559784,
+              0.45787593722343445,
+              0.07441867887973785
+            ]
+          },
+          {
+            "claim_number": 3,
+            "claim": "The available documents mention general procedures such as requesting/renewing an IP address, forgetting a Wi-Fi network via the Settings app, and running the Network and Internet troubleshooter.",
+            "best_window_support_score": 0.45057031512260437,
+            "supported_at_threshold": false,
+            "all_window_scores": [
+              0.19753305613994598,
+              0.45057031512260437,
+              0.03158959373831749
+            ]
+          },
+          {
+            "claim_number": 4,
+            "claim": "No specific reset commands (such as `netsh` commands) are provided in the source text for resetting network settings on Windows.",
+            "best_window_support_score": 0.102790467441082,
+            "supported_at_threshold": false,
+            "all_window_scores": [
+              0.09452083706855774,
+              0.102790467441082,
+              0.023066265508532524
+            ]
+          }
+        ],
+        "excluded_claims": [],
+        "context_tokens": 575,
+        "window_count": 3,
+        "window_tokens": 250,
+        "overlap_tokens": 40
+      },
+      "ragas_metrics": {
+        "answer_relevancy": 0.0,
+        "context_precision": 0.8055555555287036,
+        "context_recall": 0.0
+      },
+      "rerun_status": "completed"
+    },
+    {
+      "question": "Which protocol does the Cisco LAN switching guide describe as a preferred way to negotiate EtherChannel automatically?",
+      "publisher": "Cisco",
+      "source_file": "lan_switching_troubleshooting.pdf",
+      "topic": "PAgP and EtherChannel",
+      "answer": "Based on the provided excerpts, the Cisco LAN switching guide describes using **PAgP** (Port Aggregation Protocol) packets to negotiate an EtherChannel automatically [1], [4].\n\nKey details regarding this negotiation from the guide include:\n\n* **Protocol Used:** Switches exchange PAgP packets to negotiate and form an EtherChannel based on criteria such as port speed, trunking state, and native VLAN [1], [4].\n* **Recommended Setting:** The guide recommends setting both switches to **`desirable`** mode to exchange PAgP packets [1], [4]. This configuration is highlighted as giving the most robust behavior when one side encounters errors or is reset [4]. \n* **Supported Negotiation Modes:** \n  * **`desirable` mode:** Actively sends PAgP packets to request channel creation [1]. A port in `desirable` mode can form an EtherChannel with another port in either `desirable` or `auto` mode [4].\n  * **`auto` mode:** The default setting [1], [4]. A port in `auto` mode can form an EtherChannel with a port set to `desirable` mode [4].",
+      "reference_answer": "The guide describes the Port Aggregation Protocol (PAgP) and recommends PAgP desirable mode whenever possible for automatic EtherChannel configuration.",
+      "retrieved_context_count": 4,
+      "retrieved_sources": [
+        {
+          "source": "cisco/lan_switching_troubleshooting.pdf",
+          "file_name": "lan_switching_troubleshooting.pdf",
+          "file_type": "pdf",
+          "page_number": 36,
+          "start_index": 0
+        },
+        {
+          "source": "cisco/lan_switching_troubleshooting.pdf",
+          "file_name": "lan_switching_troubleshooting.pdf",
+          "file_type": "pdf",
+          "page_number": 22,
+          "start_index": 0
+        },
+        {
+          "source": "cisco/lan_switching_troubleshooting.pdf",
+          "file_name": "lan_switching_troubleshooting.pdf",
+          "file_type": "pdf",
+          "page_number": 17,
+          "start_index": 640
+        },
+        {
+          "source": "cisco/lan_switching_troubleshooting.pdf",
+          "file_name": "lan_switching_troubleshooting.pdf",
+          "file_type": "pdf",
+          "page_number": 23,
+          "start_index": 1317
+        }
+      ],
+      "claim_counts": {
+        "factual_claims_evaluated": 7,
+        "formatting_or_heading_excluded": 0,
+        "documentation_gap_disclaimer_excluded": 0,
+        "total_excluded": 0
+      },
+      "experimental_hhem": {
+        "mean_best_window_support_score": 0.7468157580920628,
+        "binary_claim_support_rate": 0.8571428571428571,
+        "binary_threshold": 0.5,
+        "claims": [
+          {
+            "claim_number": 1,
+            "claim": "The Cisco LAN switching guide describes using PAgP (Port Aggregation Protocol) packets to negotiate an EtherChannel automatically.",
+            "best_window_support_score": 0.7327170372009277,
+            "supported_at_threshold": true,
+            "all_window_scores": [
+              0.7327170372009277,
+              0.03621186688542366,
+              0.5725048780441284,
+              0.030044734477996826
+            ]
+          },
+          {
+            "claim_number": 2,
+            "claim": "The guide specifies that switches exchange PAgP packets to negotiate and form an EtherChannel based on criteria such as port speed, trunking state, and native VLAN.",
+            "best_window_support_score": 0.9874311685562134,
+            "supported_at_threshold": true,
+            "all_window_scores": [
+              0.23220302164554596,
+              0.08276189118623734,
+              0.9874311685562134,
+              0.22564460337162018
+            ]
+          },
+          {
+            "claim_number": 3,
+            "claim": "The guide recommends setting both switches to `desirable` mode to exchange PAgP packets, which is highlighted as giving the most robust behavior when one side encounters errors or is reset.",
+            "best_window_support_score": 0.9799385070800781,
+            "supported_at_threshold": true,
+            "all_window_scores": [
+              0.35565096139907837,
+              0.011977067217230797,
+              0.9799385070800781,
+              0.016079237684607506
+            ]
+          },
+          {
+            "claim_number": 4,
+            "claim": "The guide indicates that a port in `desirable` mode can form an EtherChannel with another port in either `desirable` or `auto` mode.",
+            "best_window_support_score": 0.516944408416748,
+            "supported_at_threshold": true,
+            "all_window_scores": [
+              0.13108877837657928,
+              0.07741238176822662,
+              0.2772641181945801,
+              0.516944408416748
+            ]
+          },
+          {
+            "claim_number": 5,
+            "claim": "The guide states that a port in `auto` mode can form an EtherChannel with a port set to `desirable` mode.",
+            "best_window_support_score": 0.4372459650039673,
+            "supported_at_threshold": false,
+            "all_window_scores": [
+              0.3986463248729706,
+              0.09391789138317108,
+              0.4372459650039673,
+              0.2401590496301651
+            ]
+          },
+          {
+            "claim_number": 6,
+            "claim": "The guide mentions that `desirable` mode is actively sending PAgP packets to request channel creation.",
+            "best_window_support_score": 0.7030990719795227,
+            "supported_at_threshold": true,
+            "all_window_scores": [
+              0.7030990719795227,
+              0.020265311002731323,
+              0.3549800515174866,
+              0.013672305271029472
+            ]
+          },
+          {
+            "claim_number": 7,
+            "claim": "The guide describes `auto` mode as the default setting for negotiating EtherChannel.",
+            "best_window_support_score": 0.8703341484069824,
+            "supported_at_threshold": true,
+            "all_window_scores": [
+              0.767410933971405,
+              0.04394704848527908,
+              0.8703341484069824,
+              0.034450337290763855
+            ]
+          }
+        ],
+        "excluded_claims": [],
+        "context_tokens": 719,
+        "window_count": 4,
+        "window_tokens": 250,
+        "overlap_tokens": 40
+      },
+      "ragas_metrics": {
+        "answer_relevancy": 0.8862713657182815,
+        "context_precision": 0.999999999975,
+        "context_recall": 1.0
+      },
+      "rerun_status": "completed"
+    },
+    {
+      "question": "What can an administrator configure with Google Workspace routing settings?",
+      "publisher": "Google Workspace",
+      "source_file": "email_routing_delivery.pdf",
+      "topic": "Email routing rules",
+      "answer": "Based on the provided excerpts, an administrator can use Google Workspace routing settings to customize how email is routed, delivered, and stored for their organization [1]. Specifically, an administrator can configure the following:\n\n* **Route unknown address messages:** Automatically route incoming messages addressed to an unknown address to a specific mailbox [1].\n* **Redirect or copy messages:** Automatically send messages addressed to a specific person to another person as well [1].\n* **Split email delivery across servers:** Configure email delivery so some users receive their messages in Gmail while other users receive email from an on-premise email server [1].\n* **Spam and compliance scanning:** Set up Gmail to scan inbound messages stored on an on-premise server for spam and compliance [1].\n\n*Note: The excerpt states that there are 2 main settings available for setting up email delivery—\"Default routing\" and \"Routing settings\"—but further configuration details beyond these points are not provided in the excerpts [1].*",
+      "reference_answer": "Routing settings can customize how email is routed, delivered, and stored. The guide describes examples such as routing messages sent to unknown addresses to a specific mailbox and sending copies of messages to another recipient.",
+      "retrieved_context_count": 4,
+      "retrieved_sources": [
+        {
+          "source": "google_workspace/email_routing_delivery.pdf",
+          "file_name": "email_routing_delivery.pdf",
+          "file_type": "pdf",
+          "page_number": 1,
+          "start_index": 0
+        },
+        {
+          "source": "ubuntu/netplan_configuration.pdf",
+          "file_name": "netplan_configuration.pdf",
+          "file_type": "pdf",
+          "page_number": 5,
+          "start_index": 704
+        },
+        {
+          "source": "google_workspace/workspace_admin_troubleshooting.pdf",
+          "file_name": "workspace_admin_troubleshooting.pdf",
+          "file_type": "pdf",
+          "page_number": 2,
+          "start_index": 0
+        },
+        {
+          "source": "google_workspace/smtp_relay_errors.pdf",
+          "file_name": "smtp_relay_errors.pdf",
+          "file_type": "pdf",
+          "page_number": 1,
+          "start_index": 0
+        }
+      ],
+      "claim_counts": {
+        "factual_claims_evaluated": 6,
+        "formatting_or_heading_excluded": 0,
+        "documentation_gap_disclaimer_excluded": 0,
+        "total_excluded": 0
+      },
+      "experimental_hhem": {
+        "mean_best_window_support_score": 0.9165050983428955,
+        "binary_claim_support_rate": 1.0,
+        "binary_threshold": 0.5,
+        "claims": [
+          {
+            "claim_number": 1,
+            "claim": "An administrator can use Google Workspace routing settings to customize how email is routed, delivered, and stored for their organization.",
+            "best_window_support_score": 0.9878491163253784,
+            "supported_at_threshold": true,
+            "all_window_scores": [
+              0.9878491163253784,
+              0.3719500005245209,
+              0.12189779430627823,
+              0.01752692274749279
+            ]
+          },
+          {
+            "claim_number": 2,
+            "claim": "Automatically route incoming messages addressed to an unknown address to a specific mailbox.",
+            "best_window_support_score": 0.9856182932853699,
+            "supported_at_threshold": true,
+            "all_window_scores": [
+              0.9856182932853699,
+              0.2135852575302124,
+              0.16822929680347443,
+              0.27845945954322815
+            ]
+          },
+          {
+            "claim_number": 3,
+            "claim": "Automatically send messages addressed to a specific person to another person as well.",
+            "best_window_support_score": 0.9906253814697266,
+            "supported_at_threshold": true,
+            "all_window_scores": [
+              0.9906253814697266,
+              0.03940124809741974,
+              0.05986214056611061,
+              0.12091722339391708
+            ]
+          },
+          {
+            "claim_number": 4,
+            "claim": "Configure email delivery so some users receive their messages in Gmail while other users receive email from an on-premise email server.",
+            "best_window_support_score": 0.992682158946991,
+            "supported_at_threshold": true,
+            "all_window_scores": [
+              0.992682158946991,
+              0.15816321969032288,
+              0.431384801864624,
+              0.030820049345493317
+            ]
+          },
+          {
+            "claim_number": 5,
+            "claim": "Set up Gmail to scan inbound messages stored on an on-premise server for spam and compliance.",
+            "best_window_support_score": 0.9914352297782898,
+            "supported_at_threshold": true,
+            "all_window_scores": [
+              0.9914352297782898,
+              0.01893986202776432,
+              0.029076196253299713,
+              0.012733847834169865
+            ]
+          },
+          {
+            "claim_number": 6,
+            "claim": "The excerpt states that there are 2 main settings available for setting up email delivery—\"Default routing\" and \"Routing settings\"—but further configuration details beyond these points are not provided in the excerpts.",
+            "best_window_support_score": 0.5508204102516174,
+            "supported_at_threshold": true,
+            "all_window_scores": [
+              0.5508204102516174,
+              0.0555647648870945,
+              0.03509879112243652,
+              0.015201779082417488
+            ]
+          }
+        ],
+        "excluded_claims": [],
+        "context_tokens": 726,
+        "window_count": 4,
+        "window_tokens": 250,
+        "overlap_tokens": 40
+      },
+      "ragas_metrics": {
+        "answer_relevancy": 0.986467841771222,
+        "context_precision": 0.7499999999625,
+        "context_recall": null,
+        "context_recall_error": "Metric timeout"
+      },
+      "rerun_status": "completed"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+    "evaluation_type": "experimental_classified_windowed_hhem",
+    "judge_model": "qwen2.5:3b",
+    "verification_model": "vectara/hallucination_evaluation_model",
+    "question": "How can I troubleshoot an SSH connection timeout when connecting to an Amazon EC2 Linux instance?",
+    "classification_counts": {
+        "factual_claims_evaluated": 8,
+        "formatting_or_heading_excluded": 0,
+        "documentation_gap_disclaimer_excluded": 1,
+        "total_excluded": 1
+    },
+    "faithfulness_results": {
+        "mean_hhem_support_score": 0.9194887727499008,
+        "binary_claim_support_rate": 1.0,
+        "binary_threshold": 0.5
+    },
+    "factual_claim_results": [
+        {
+            "claim_number": 1,
+            "claim": "To troubleshoot an SSH connection timeout (such as `Network error: Connection timed out` or `Connection timed out: connect`) when connecting to an Amazon EC2 Linux instance, follow these steps:",
+            "best_window_support_score": 0.8594902753829956,
+            "supported_at_threshold": true,
+            "all_window_scores": [
+                0.8594902753829956,
+                0.3194659948348999,
+                0.4388054311275482
+            ]
+        },
+        {
+            "claim_number": 2,
+            "claim": "Instance Status: Verify that the EC2 instance is currently running and has passed its status checks .",
+            "best_window_support_score": 0.9526296257972717,
+            "supported_at_threshold": true,
+            "all_window_scores": [
+                0.9526296257972717,
+                0.09483539313077927,
+                0.17626133561134338
+            ]
+        },
+        {
+            "claim_number": 3,
+            "claim": "Prerequisites: Confirm that you are using the correct AMI username and that inbound TCP port 22 access is configured for your client IP address .",
+            "best_window_support_score": 0.9650298953056335,
+            "supported_at_threshold": true,
+            "all_window_scores": [
+                0.9650298953056335,
+                0.038800183683633804,
+                0.02533605694770813
+            ]
+        },
+        {
+            "claim_number": 4,
+            "claim": "Open the EC2 console, choose **Instances**, and select your instance .",
+            "best_window_support_score": 0.9114763736724854,
+            "supported_at_threshold": true,
+            "all_window_scores": [
+                0.9114763736724854,
+                0.03686073049902916,
+                0.1472111940383911
+            ]
+        },
+        {
+            "claim_number": 5,
+            "claim": "Navigate to the **Security** tab and inspect the **Inbound rules** .",
+            "best_window_support_score": 0.8172080516815186,
+            "supported_at_threshold": true,
+            "all_window_scores": [
+                0.8172080516815186,
+                0.11138143390417099,
+                0.020413659512996674
+            ]
+        },
+        {
+            "claim_number": 6,
+            "claim": "Confirm that a rule exists permitting traffic from your local computer to **TCP port 22 (SSH)**. If no such rule exists, add an inbound SSH rule .",
+            "best_window_support_score": 0.9172176122665405,
+            "supported_at_threshold": true,
+            "all_window_scores": [
+                0.9172176122665405,
+                0.12505240738391876,
+                0.034705836325883865
+            ]
+        },
+        {
+            "claim_number": 7,
+            "claim": "Verify the rule's **Source**. If your public IP address changes, a single-IP rule might no longer match. Ensure you use the appropriate client IP range as advised by your network policy .",
+            "best_window_support_score": 0.9555496573448181,
+            "supported_at_threshold": true,
+            "all_window_scores": [
+                0.902342677116394,
+                0.9555496573448181,
+                0.03436726704239845
+            ]
+        },
+        {
+            "claim_number": 8,
+            "claim": "Ensure that the subnet's route table contains a route for traffic bound outside the VPC to the VPC's internet gateway .",
+            "best_window_support_score": 0.9773086905479431,
+            "supported_at_threshold": true,
+            "all_window_scores": [
+                0.045213956385850906,
+                0.9773086905479431,
+                0.03044993430376053
+            ]
+        }
+    ],
+    "excluded_claims": [
+        {
+            "original_statement": "Note: While network connection troubleshooting can involve Network Access Control Lists (NACLs), the specific operating-system-specific ephemeral-port ranges for NACLs are not detailed in the available documentation excerpts [4].",
+            "cleaned_statement": "Note: While network connection troubleshooting can involve Network Access Control Lists (NACLs), the specific operating-system-specific ephemeral-port ranges for NACLs are not detailed in the available documentation excerpts .",
+            "category": "documentation_gap_disclaimer"
+        }
+    ],
+    "evidence": {
+        "retrieved_context_count": 4,
+        "total_context_tokens": 699,
+        "window_tokens": 350,
+        "overlap_tokens": 50,
+        "number_of_windows": 3
+    },
+    "limitations": [
+        "Experimental custom HHEM evaluation, not standard RAGAS Faithfulness.",
+        "Claim extraction uses Qwen 2.5 3B.",
+        "Formatting and documentation-gap exclusions follow explicit rules.",
+        "Best-window support aggregation can overestimate support.",
+        "All claims and exclusions require manual review."
+    ]
+}

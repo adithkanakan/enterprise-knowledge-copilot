@@ -1,0 +1,5 @@
+﻿method,questions_evaluated,hit_at_1_percent,hit_at_3_percent,hit_at_4_percent,average_unique_pdfs,average_unique_pages
+similarity,45,88.89,100.0,100.0,1.71,2.96
+mmr_07,45,88.89,100.0,100.0,2.13,3.44
+mmr_085,45,88.89,100.0,100.0,1.82,3.04
+rrf,45,88.89,100.0,100.0,1.87,3.22

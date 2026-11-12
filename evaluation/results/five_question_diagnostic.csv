@@ -1,0 +1,6 @@
+publisher,question,rerun_status,answer_relevancy,context_precision,context_recall,hhem_mean_support,hhem_binary_support_rate,error
+Google Workspace,What does the Google Workspace SMTP relay error 'Mail relay denied' indicate?,completed,0.0,,,0.7708447277545929,1.0,
+Google Workspace,What does Gmail SMTP error 452 4.2.2 indicate?,completed,0.0,0.9999999999,0.0,0.27719922363758087,0.0,
+Microsoft,Which commands does Microsoft recommend for resetting network settings and refreshing DNS on Windows?,completed,0.0,0.8055555555287036,0.0,0.3946476262062788,0.25,
+Cisco,Which protocol does the Cisco LAN switching guide describe as a preferred way to negotiate EtherChannel automatically?,completed,0.8862713657182815,0.999999999975,1.0,0.7468157580920628,0.8571428571428571,
+Google Workspace,What can an administrator configure with Google Workspace routing settings?,completed,0.986467841771222,0.7499999999625,,0.9165050983428955,1.0,

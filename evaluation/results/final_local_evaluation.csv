@@ -1,0 +1,21 @@
+publisher,question,source_file,answer_relevancy,context_precision,context_recall,hhem_mean_support,hhem_binary_support_rate,factual_claims,formatting_excluded,documentation_disclaimers_excluded
+AWS,How can I troubleshoot an SSH connection timeout when connecting to an Amazon EC2 Linux instance?,ec2_connectivity.pdf,0.9872769208226806,0.999999999975,0.75,0.9227488562464714,1.0,8,0,1
+AWS,How can I investigate an EC2 instance that is experiencing high CPU load and connection problems?,ec2_connectivity.pdf,0.9328526478135392,0.9166666666361111,1.0,0.8751784414052963,0.9166666666666666,12,0,0
+AWS,What five types of status checks are described for Amazon EC2 instances?,ec2_status_checks.pdf,0.9965258967325306,0.999999999975,1.0,0.8571519613265991,1.0,5,1,0
+AWS,What default SSH username should I use for an Ubuntu EC2 instance?,ec2_connectivity.pdf,0.9600496608892478,0.7499999999625,1.0,0.16567042842507362,0.0,2,0,0
+Cisco,What should be consistent across ports that are grouped into a Cisco EtherChannel?,lan_switching_troubleshooting.pdf,0.7925985112104444,0.8055555555287036,1.0,0.6234234809875489,0.8,5,0,0
+Cisco,Why should adjacent Cisco wireless access points use non-overlapping channels?,wireless_lan_connectivity.pdf,0.9300556449188092,0.9999999999,1.0,0.9702599843343099,1.0,6,0,0
+Cisco,What can cause poor wireless throughput when multiple access points are deployed close to each other?,wireless_lan_connectivity.pdf,0.9766384409256293,0.99999999995,1.0,0.6144681610167027,0.75,4,0,0
+Cisco,Which protocol does the Cisco LAN switching guide describe as a preferred way to negotiate EtherChannel automatically?,lan_switching_troubleshooting.pdf,0.8862713657182815,,1.0,0.7737887620925903,0.8,5,0,0
+Google Workspace,What can an administrator configure with Google Workspace routing settings?,email_routing_delivery.pdf,0.986467841771222,0.7499999999625,,0.9165050983428955,1.0,6,0,0
+Google Workspace,"Which server is used by Gmail clients to send outgoing mail, according to the IMAP, POP, and SMTP configuration guide?",imap_pop_smtp_configuration.pdf,0.8817272767115782,0.999999999975,1.0,0.6562924832105637,0.75,4,0,0
+Google Workspace,What does the Google Workspace SMTP relay error 'Mail relay denied' indicate?,smtp_relay_errors.pdf,0.0,0.9166666666361111,,0.7708447277545929,1.0,2,0,0
+Google Workspace,What does Gmail SMTP error 452 4.2.2 indicate?,gmail_smtp_errors.pdf,0.0,,0.0,0.27719922363758087,0.0,3,0,0
+Microsoft,How can a user run the Windows network and internet troubleshooter from the Get Help app?,network_troubleshooting.pdf,0.9448437095284479,0.9999999999666667,1.0,0.934141586224238,1.0,6,0,0
+Microsoft,Which commands does Microsoft recommend for resetting network settings and refreshing DNS on Windows?,ethernet_troubleshooting.pdf,0.0,0.8055555555287036,0.0,0.3946476262062788,0.25,4,0,0
+Microsoft,Which Windows service can be restarted when a printer is not recognized?,printer_troubleshooting.pdf,1.0,0.9166666666361111,1.0,0.6610649470239878,0.6666666666666666,6,1,0
+Microsoft,How can a user run the Windows printer troubleshooter from the Get Help app?,network_troubleshooting.pdf,0.9525288072269432,0.9999999999666667,1.0,0.9561381042003632,1.0,8,0,0
+Ubuntu,What is the default firewall configuration tool described in the Ubuntu Server firewall guide?,firewall_configuration.pdf,0.9370188031782151,0.8055555555287036,1.0,0.7062215246260166,0.75,4,0,0
+Ubuntu,How can I check the network interfaces and IP addresses configured on Ubuntu Server?,netplan_configuration.pdf,0.7834012150553248,0.9166666666361111,1.0,0.7791561484336853,0.75,8,0,0
+Ubuntu,Which file can be edited to configure the default behavior of the OpenSSH server on Ubuntu?,openssh_configuration.pdf,0.8717867288728313,0.999999999975,1.0,0.5929157108068466,0.6,5,0,0
+Ubuntu,How do I configure a static IP address on an Ubuntu Server using Netplan?,netplan_configuration.pdf,0.9977488592910171,0.9166666666361111,1.0,0.3938425527885556,0.25,8,1,0

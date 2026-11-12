@@ -1,0 +1,27 @@
+document_name,publisher,category,source_url,file_format,date_accessed
+wifi_troubleshooting.pdf,Microsoft,Windows / Wi-Fi,https://support.microsoft.com/en-us/windows/experience/connectivity-networking/fix-wi-fi-connection-issues-in-windows,PDF,2026-11-05
+ethernet_troubleshooting.pdf,Microsoft,Windows / Ethernet,https://support.microsoft.com/en-us/windows/experience/connectivity-networking/fix-ethernet-connection-problems-in-windows,PDF,2026-11-05
+printer_troubleshooting.pdf,Microsoft,Windows / Printers,https://support.microsoft.com/en-us/windows/hardware/printer/fix-printer-not-found-and-printer-not-recognized-errors-in-windows,PDF,2026-11-05
+windows_troubleshooters.pdf,Microsoft,Windows / Network and printer diagnostics,https://support.microsoft.com/en-us/support/get-help/windows-troubleshooters,PDF,2026-11-05
+ubuntu_networking.pdf,Ubuntu,Linux / Networking,https://ubuntu.com/server/docs/how-to/networking/,PDF,2026-11-05
+netplan_configuration.pdf,Ubuntu,Linux / Network configuration,https://ubuntu.com/server/docs/configuring-networks/,PDF,2026-11-05
+dns_configuration.pdf,Ubuntu,Linux / DNS,https://ubuntu.com/server/docs/how-to/networking/install-dns/,PDF,2026-11-05
+ubuntu_installation.pdf,Ubuntu,Linux / Server installation,https://ubuntu.com/server/docs/tutorial/installation/,PDF,2026-11-05
+firewall_configuration.pdf,Ubuntu,Linux / Firewall security,https://ubuntu.com/server/docs/firewalls/,PDF,2026-11-05
+openssh_configuration.pdf,Ubuntu,Linux / SSH security,https://ubuntu.com/server/docs/how-to/security/openssh-server/,PDF,2026-11-05
+ec2_connectivity.pdf,AWS,Cloud / EC2 connectivity,https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesConnecting.html,PDF,2026-11-05
+ec2_troubleshooting.pdf,AWS,Cloud / EC2 troubleshooting,https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstances.html,PDF,2026-11-05
+ec2_status_checks.pdf,AWS,Cloud / EC2 status checks,https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-system-instance-status-check.html,PDF,2026-11-05
+ec2_monitoring.pdf,AWS,Cloud / EC2 monitoring,https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring_ec2.html,PDF,2026-11-05
+ec2_view_status_checks.pdf,AWS,Cloud / EC2 operational status,https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/viewing_status.html,PDF,2026-11-05
+workspace_admin_help.pdf,Google Workspace,Administration / Support,https://support.google.com/a/,PDF,2026-11-05
+gmail_smtp_errors.pdf,Google,Email / SMTP errors,https://support.google.com/mail/answer/3726730?hl=en,PDF,2026-11-05
+email_delivery_bounces.pdf,Google,Email / Bounced or rejected messages,https://support.google.com/mail/answer/6596?hl=en,PDF,2026-11-05
+email_delivery_troubleshooter.pdf,Google,Email / Delivery troubleshooting,https://support.google.com/mail/troubleshooter/2696779?hl=en,PDF,2026-11-05
+admin_email_support_diagnostics.pdf,Google Workspace,"Administration / IMAP, POP and SMTP diagnostics",https://knowledge.workspace.google.com/admin/support/before-you-contact-support-gather-key-information,PDF,2026-11-05
+imap_pop_smtp_configuration.pdf,Google,"Email / IMAP, POP and SMTP",https://developers.google.com/workspace/gmail/imap/imap-smtp,PDF,2026-11-05
+wireless_lan_connectivity.pdf,Cisco,Networking / Wireless LAN,https://www.cisco.com/c/en/us/support/docs/wireless/aironet-340-series/8117-connectivity.html,PDF,2026-11-05
+broken_wireless_lan.pdf,Cisco,Networking / Wireless LAN,https://www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/30218-wlantroublshoot.pdf,PDF,2026-11-05
+tcp_ip_troubleshooting.pdf,Cisco,Networking / TCP-IP,https://www.cisco.com/en/US/docs/internetworking/troubleshooting/guide/tr1907.html,PDF,2026-11-05
+lan_switching_troubleshooting.pdf,Cisco,Networking / LAN switching,https://www.cisco.com/c/en/us/support/docs/lan-switching/ethernet/12006-chapter22.html,PDF,2026-11-05
+ip_routing_troubleshooting.pdf,Cisco,Networking / IP routing,https://www.cisco.com/c/en/us/td/docs/dcn/nx-os/nexus9000/104x/troubleshooting/cisco-nexus-9000-series-nx-os-troubleshooting-guide-104x/m-troubleshooting-routing.pdf,PDF,2026-11-05

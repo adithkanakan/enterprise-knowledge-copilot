@@ -1,0 +1,146 @@
+{
+    "fingerprint": "7999dbb9eb2a149ebd04444fa32025036e553dcf882453e29c894605d0962b9e",
+    "completed_samples": {
+        "0": {
+            "question": "How can I troubleshoot an SSH connection timeout when connecting to an Amazon EC2 Linux instance?",
+            "answer": "To troubleshoot an SSH connection timeout error (such as `Network error: Connection timed out` or `Connection timed out: connect`) when connecting to an Amazon EC2 Linux instance, follow these steps to verify the network path between your client computer and the instance [1, 2]:\n\n### 1. Perform Quick Triage and Prerequisites Checks\n* Confirm that the instance is running and has passed its status checks [1].\n* Verify that your connection setup allows inbound access on TCP port 22 from your client IP address [1].\n\n### 2. Check the Security Group Rules\n1. Open the EC2 console, choose **Instances**, and select your instance [2].\n2. Go to the **Security** tab and inspect **Inbound rules** [2].\n3. Verify that a rule exists allowing traffic from your local computer to **TCP port 22 (SSH)** [2]. If no rule exists, add an inbound SSH rule [2].\n4. Inspect the rule's **Source** field [2]. If your public IP address has changed, a single-IP rule might no longer match [2]. Update the source with the appropriate client IP range in accordance with your network policy [2].\n\n### 3. Verify the Subnet Route Table\n* Check that the subnet where the instance resides has a route configured for traffic outside the VPC to reach the VPC's internet gateway [2].\n\n*(Note: Detailed step-by-step instructions for modifying subnet route tables are not fully provided in the available document excerpts beyond the requirement to have a route pointing to the VPC's internet gateway [2].)*",
+            "reference_answer": "Check that the security group allows inbound SSH traffic on port 22 from the client IP. Verify the subnet route table has a route to the internet gateway, check the network ACL for inbound SSH and outbound ephemeral traffic, and inspect local firewall and instance networking.",
+            "answerable": true,
+            "retrieved_contexts": [
+                "Amazon EC2 Linux Connection Troubleshooting\nPage 1\nTROUBLESHOOT ISSUES CONNECTING TO YOUR\nAMAZON EC2 LINUX INSTANCE\nAmazon Elastic Compute Cloud | Structured technical troubleshooting reference\n1. Scope and quick triage\nThis guide organizes the supplied AWS procedures for connection problems involving Amazon EC2 Linux instances. It covers\nSSH reachability, usernames, key-pair errors, host-key validation, ping, EC2 Instance Connect, and recovery when a private key\nis lost.\nStart with these checks\nConfirm the AMI username, verify that the instance is running and has passed its status checks, and confirm that the connection\nmethod's prerequisites are met. For SSH, verify inbound TCP port 22 access from the client IP address.\n2. Common connection prerequisites\n2.1 Confirm the AMI username",
+                "Amazon EC2 Linux Connection Troubleshooting\nPage 2\n3. SSH connection timed out\nUse this section when the client reports Network error: Connection timed out or Connection timed out: connect. Check the\nnetwork path between the client computer and the EC2 instance.\n3.1 Security group\n 1. In the EC2 console, choose Instances and select the instance.\n 2. On the Security tab, inspect Inbound rules.\n 3. Verify that a rule allows traffic from the local computer to TCP port 22 (SSH). If no rule exists, add an inbound SSH rule.\n 4. Check the rule's Source. If the public IP address changes, a single-IP rule might stop matching. Use the appropriate client IP\n range as advised by network policy.\n3.2 Subnet route table\n The subnet needs a route for traffic outside the VPC to the VPC's internet gateway.",
+                "Amazon EC2 Linux Connection Troubleshooting\nPage 4\n6.3 Server unexpectedly closed network connection\nFor PuTTY, enable keepalives on the Connection page. The source recommends setting Seconds between keepalives to 59\nseconds. If the issue continues, try disabling Nagle's algorithm on the Connection page.\n7. Ping and ICMP checks\nPing uses ICMP traffic. If the instance cannot be pinged:\n Ensure the instance's inbound security group allows ICMP Echo Request messages from the required source or from the\ncomputer/instance issuing the ping.\n If the ping originates from the instance, ensure its outbound security group allows the required ICMP traffic to the destination.\n A firewall, network latency, or hardware issue can also block or delay ping. Contact the network administrator for further",
+                " A firewall, network latency, or hardware issue can also block or delay ping. Contact the network administrator for further\ntroubleshooting.\n8. EC2 Instance Connect errors\n8.1 Host key validation failed for EC2 Instance Connect\nIf instance host keys are rotated, the new host keys are not automatically uploaded to the AWS trusted-host-key database. The\nsource says this can cause validation to fail in the browser-based EC2 Instance Connect client.\nFor Amazon Linux 2, the source directs the administrator to connect by SSH, navigate to the script directory, and run\neic_harvest_hostkeys. A successful call produces no output.\nThe source identifies the Ubuntu script directory as /usr/share/ec2-instance-connect/, but the remainder of the path is clipped in"
+            ],
+            "retrieved_sources": [
+                {
+                    "source": "aws/ec2_connectivity.pdf",
+                    "file_name": "ec2_connectivity.pdf",
+                    "file_type": "pdf",
+                    "page_number": 1,
+                    "start_index": 0
+                },
+                {
+                    "source": "aws/ec2_connectivity.pdf",
+                    "file_name": "ec2_connectivity.pdf",
+                    "file_type": "pdf",
+                    "page_number": 2,
+                    "start_index": 0
+                },
+                {
+                    "source": "aws/ec2_connectivity.pdf",
+                    "file_name": "ec2_connectivity.pdf",
+                    "file_type": "pdf",
+                    "page_number": 4,
+                    "start_index": 0
+                },
+                {
+                    "source": "aws/ec2_connectivity.pdf",
+                    "file_name": "ec2_connectivity.pdf",
+                    "file_type": "pdf",
+                    "page_number": 4,
+                    "start_index": 674
+                }
+            ],
+            "latency_seconds": 114.1778,
+            "expected_abstention": false,
+            "actual_abstention": false,
+            "abstention_correct": true,
+            "evaluation_errors": {}
+        },
+        "1": {
+            "question": "Why should adjacent Cisco wireless access points use non-overlapping channels?",
+            "answer": "Adjacent Cisco wireless access points (APs) should use non-overlapping channels to prevent radio frequency (RF) interference [1]. \n\nIf channels that overlap are used between adjacent APs, it leads to the following network problems:\n* **RF Interference:** Frequency bands that share common frequencies create RF interference [1].\n* **Connectivity Issues:** RF interference causes network connectivity problems for wireless devices [1].\n* **Poor Throughput:** Interference reduces overall wireless performance, resulting in poor throughput [1].\n\nTo safely extend radio coverage across multiple APs (for example, in the 2.4-GHz range), adjacent APs should be configured on distinct non-overlapping channels, such as Channel 1 for the first AP, Channel 6 for the next adjacent AP, and Channel 11 for the third AP [1].",
+            "reference_answer": "Using non-overlapping channels reduces radio-frequency interference. In the 2.4 GHz range, channels 1, 6 and 11 are examples of non-overlapping channels.",
+            "answerable": true,
+            "retrieved_contexts": [
+                "Use of Channels which do not overlap\nWhen you have multiple APs in a wireless LAN (WLAN), ensure that the channels used by the adjacent\nAPs do not nonoverlap. Nonoverlapping channels are frequency bands that do not have a frequency that\nis common to the other channels.\nFor example, in the 2.4-GHz range, there are three channels that do not overlap (channels 1, 6, and 11).\nTherefore, when you deploy a secondary AP in order to extend the radio coverage, you can use:\nChannel 1 for the rst AP\nChannel 6 for the next adjacent AP\nChannel 11 for the third AP\nThen you can start with channel 1.\nIf you use channels that overlap, RF interference can occur. This leads to connectivity issues and results in\npoor throughput.\nRefer to for more information on RF interference.\n Cisco IOS® Upgrade",
+                "Spanning Tree Protocol\nAs you have seen, the transparent bridging algorithm floods unknown and broadcast frames out of all the\nports that are in the same VLAN as the received frame. This causes a potential problem. If the network\ndevices that run this algorithm are connected together in a physical loop, flooded frames (like broadcasts)\nare passed from switch to switch, around and around the loop, forever. Dependent upon the physical\nconnections involved, the frames can actually multiply exponentially due to the flooding algorithm, which\ncan cause serious network problems.\nThere is a benefit to a physical loop in your network: it can provide redundancy. If one link fails, there is\nstill another way for the traffic to reach its destination. In order to allow the benefits derived from",
+                "Trunking over FDDI uses 802.10.\nEtherChannel\nEtherChannel is a technique that is used when you have multiple connections to the same device. Rather\nthan each link function independently, EtherChannel groups the ports together to work as one unit. It\ndistributes traffic across all the links and provides redundancy if one or more links fail. EtherChannel\nsettings must be the same on both sides of the links involved in the channel. Normally, spanning tree\nwould block all of these parallel connections between devices because they are loops, but EtherChannel\nruns underneath spanning tree, so that spanning tree thinks all the ports within a given EtherChannel are\nonly a single port.",
+                "Bridge\nIndicator LEDs\nSSID\nWEP Keys\nLine of Sight and Fresnel Zone\nSpanning Tree Protocol\nRelated Information\nIntroduction\nThis document describes common connectivity problems in conguration, interference, and cable in a\nwireless network.\nPrerequisites\nRequirements\nCisco Aironet equipment operates best when you load all components with the most current version of\nthe software.\nUpgrade to the latest versions of the software early in the troubleshooting process.\nYou can download the latest software and drivers from the Cisco Software Download page.\nThis document complements the information in .\nComponents Used\nThis document is not restricted to specic software and hardware versions.\nThe information in this document was created from the devices in a specic lab environment. All of the"
+            ],
+            "retrieved_sources": [
+                {
+                    "source": "cisco/wireless_lan_connectivity.pdf",
+                    "file_name": "wireless_lan_connectivity.pdf",
+                    "file_type": "pdf",
+                    "page_number": 7,
+                    "start_index": 0
+                },
+                {
+                    "source": "cisco/lan_switching_troubleshooting.pdf",
+                    "file_name": "lan_switching_troubleshooting.pdf",
+                    "file_type": "pdf",
+                    "page_number": 3,
+                    "start_index": 669
+                },
+                {
+                    "source": "cisco/lan_switching_troubleshooting.pdf",
+                    "file_name": "lan_switching_troubleshooting.pdf",
+                    "file_type": "pdf",
+                    "page_number": 3,
+                    "start_index": 3328
+                },
+                {
+                    "source": "cisco/wireless_lan_connectivity.pdf",
+                    "file_name": "wireless_lan_connectivity.pdf",
+                    "file_type": "pdf",
+                    "page_number": 2,
+                    "start_index": 0
+                }
+            ],
+            "latency_seconds": 9.5176,
+            "expected_abstention": false,
+            "actual_abstention": false,
+            "abstention_correct": true,
+            "evaluation_errors": {}
+        },
+        "2": {
+            "question": "What is the annual leave entitlement for employees of TechNova Solutions?",
+            "answer": "Based on the provided excerpts, the information regarding the annual leave entitlement for employees of TechNova Solutions is unavailable. \n\nThe retrieved documents only contain technical troubleshooting logs and documentation for Cisco network equipment [1, 3, 4] and Google Workspace migration support procedures [2].",
+            "reference_answer": "",
+            "answerable": false,
+            "retrieved_contexts": [
+                "2000 Jan 17 19:09:52 %DTP-5-TRUNKPORTON:Port 2/1 has become isl trunk\n2000 Jan 17 19:09:52 %DTP-5-TRUNKPORTON:Port 2/2 has become isl trunk\n2000 Jan 17 19:09:52 %PAGP-5-PORTFROMSTP:Port 2/1 left bridge port 2/1-4\n2000 Jan 17 19:09:52 %DTP-5-TRUNKPORTON:Port 2/3 has become isl trunk\n2000 Jan 17 19:09:52 %PAGP-5-PORTFROMSTP:Port 2/2 left bridge port 2/1-4\n2000 Jan 17 19:09:53 %DTP-5-TRUNKPORTON:Port 2/4 has become isl trunk\n2000 Jan 17 19:09:53 %PAGP-5-PORTFROMSTP:Port 2/3 left bridge port 2/1-4",
+                "Legible screenshots showing the full URL and exact error message or error condition\nThe details of the source environment server, such as name, port, and type of server\nGoogle Workspace Migrate\nReview the following information and provide any relevant details when submitting a support case:\nTroubleshoot Google Workspace Migrate (\nContact support for Google Workspace Migrate issues\n(\nGoogle Workspace Migration for Microsoft Exchange (GWMME)\nProvide the following information when submitting a support case:\nThe Exchange server version and patch level, if applicable\nWhether an admin account exists on Exchange with Receive As rights to all users' mailboxes\nThe number of affected accounts\nAffected usernames\nEven if all users are affected, provide an example user",
+                "The fields of the IP packet are as follows:\n•\n Version—Indicates the version of this IP datagram.\n•\n IP Header Length (IHL)—Indicates the datagram header length in\n32-bit words.\n•\n Type-of-Service—Specifies how a particular upper-layer protocol\nwould like the current datagram to be handled. Datagrams can be\nassigned various levels of importance using this field.\nToday this field is used primarily to provide quality of service (QoS)\ncapabilities to TCP/IP for applications requiring predictable bandwidth or\ndelay. RFC 2474 describes a method by which the TOS field is replaced\nby a DS field that is used to provide differentiated services (DiffServ) on\nnetworks. This field is split into two parts. The first 6 bits are used for the",
+                "DRAM                    FLASH                   NVRAM\nModule Total   Used    Free    Total   Used    Free    Total Used  Free\n------ ------- ------- ------- ------- ------- ------- ----- ----- -----\n1       32640K  13648K  18992K   8192K   4118K   4074K  512K  119K  393K\nUptime is 28 days, 18 hours, 54 minutes\nSwitch-A (enable) show module\nMod Module-Name         Ports Module-Type           Model    Serial-Num \nStatus\n--- ------------------- ----- --------------------- --------- --------- ----\n---\n1                       0     Supervisor III        WS-X5530  006841805 ok\n2                       24    10/100BaseTX Ethernet WS-X5225R 012785227 ok\nMod MAC-Address(es)                        Hw     Fw         Sw\n--- -------------------------------------- ------ ---------- ---------------"
+            ],
+            "retrieved_sources": [
+                {
+                    "source": "cisco/lan_switching_troubleshooting.pdf",
+                    "file_name": "lan_switching_troubleshooting.pdf",
+                    "file_type": "pdf",
+                    "page_number": 27,
+                    "start_index": 2521
+                },
+                {
+                    "source": "google_workspace/workspace_admin_troubleshooting.pdf",
+                    "file_name": "workspace_admin_troubleshooting.pdf",
+                    "file_type": "pdf",
+                    "page_number": 6,
+                    "start_index": 0
+                },
+                {
+                    "source": "cisco/tcp_ip_troubleshooting.pdf",
+                    "file_name": "tcp_ip_troubleshooting.pdf",
+                    "file_type": "pdf",
+                    "page_number": 5,
+                    "start_index": 0
+                },
+                {
+                    "source": "cisco/lan_switching_troubleshooting.pdf",
+                    "file_name": "lan_switching_troubleshooting.pdf",
+                    "file_type": "pdf",
+                    "page_number": 43,
+                    "start_index": 615
+                }
+            ],
+            "latency_seconds": 6.1089,
+            "expected_abstention": true,
+            "actual_abstention": true,
+            "abstention_correct": true,
+            "evaluation_errors": {}
+        }
+    }
+}

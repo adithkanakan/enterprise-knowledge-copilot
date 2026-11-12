@@ -1,0 +1,24 @@
+{
+    "run_id": "20261109T092048545271Z",
+    "timestamp_utc": "2026-11-09T09:20:48.564368+00:00",
+    "ragas_version": "0.4.3",
+    "gemini_model": "gemini-3.5-flash",
+    "retrieval_k": 4,
+    "dataset_questions_total": 50,
+    "questions_evaluated": 3,
+    "answerable_questions": 2,
+    "unanswerable_questions": 1,
+    "ragas_enabled": false,
+    "ragas_samples_scored": 0,
+    "resumed_from_checkpoint": false,
+    "average_latency_seconds": 9.3884,
+    "abstention_accuracy": 0.0,
+    "ragas_average_scores": {
+        "faithfulness": null,
+        "answer_relevancy": null,
+        "context_precision": null,
+        "context_recall": null
+    },
+    "results_file": "evaluation\\results\\generation_smoke_test\\evaluation_results_20261109T092048545271Z.csv",
+    "checkpoint_file": "evaluation\\results\\generation_smoke_test\\evaluation_checkpoint.json"
+}

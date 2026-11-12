@@ -1,0 +1,42 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+logs/*
+!logs/.gitkeep
+
+# Generated vector indexes
+indexes/
+
+# Original documentation corpus
+data/raw/
+
+# Generated processed documents (review before publishing)
+data/processed/
+
+# Temporary files
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
