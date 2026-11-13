@@ -1,3 +1,4 @@
+> OUTDATED (written during the starter phase). See PROJECT_PROGRESS.md in the repo root for the current status.
 
 # Enterprise Knowledge Copilot — Project Status
 
