@@ -11,14 +11,14 @@ Enterprise Knowledge Copilot is an evidence-grounded IT Helpdesk RAG assistant t
 ## Repository Structure
 
 ```text
-├── app.py, requirements.txt, RULES.md, PROJECT_PROGRESS.md
+├── app.py, run_final_evaluation.py, rerun_ragas_only.py, run_five_question_diagnostic.py, requirements.txt, RULES.md, PROJECT_PROGRESS.md
 ├── src/                 # config, ingestion, chunking, retrieval, generation, evaluation
 ├── data/                # raw/ (PDFs), processed/ (Markdown), source_manifest.csv
 ├── docs/archive/        # archived status docs
 ├── indexes/             # faiss_index/ (1,085 vectors), faiss_index_backup/
 ├── evaluation/          # datasets/, results/
 ├── logs/                # interaction logs
-├── notebooks/           # prototyping
+├── notebooks/           # empty placeholder
 └── scripts/archive/     # diagnostic and investigation scripts
 ```
 
